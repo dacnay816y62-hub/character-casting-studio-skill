@@ -1,30 +1,217 @@
-# Character Casting Studio Skill
+# Character Casting Studio
 
-Material-reference-driven character generation for original, photorealistic human characters.
+## 人物角色生成 Skill
 
-## Default Workflow
+用于生成原创、真实、可用于广告、影视、电影角色设计和时尚视觉开发的人物形象。
 
-The default function generates the person first. It focuses on face, temperament, makeup, hair, clothing, age, identity, and photographic quality. A single character image is the default output.
+核心目标不是随机生成一张漂亮脸，而是建立一个**有脸、有气质、有身份、有记忆点、可继续开发的人物角色**。
 
-Multi-view assets are opt-in. Use the multi-view workflow only when the user explicitly requests a three-view image, white-background character image, character breakdown, or character turnaround. In that mode, use the already approved character as the source of truth and change only the requested viewing angle.
+## 适用场景
 
-## Core Rules
+- 广告人物与品牌代言人形象
+- 影视剧、电影角色前期设计
+- 超模、时尚人物和品牌视觉
+- 小说人物、历史人物原型的原创转译
+- 校园、职场、家庭、江湖、古典、现代等角色设定
+- 一组具有明显差异的人物形象
+- 头肩肖像、角色海报和演员 casting 参考
+- 用户明确要求的三视图或白底角色拆解图
 
-- Original fictional identity, never a copied real person or celebrity likeness.
-- Source-material synthesis for distinctive, production-grade faces.
-- Clear identity separation across batches; avoid sibling, twin, or triplet faces.
-- Natural semi-matte skin with subtle pores and restrained highlights.
-- No waxy skin, plastic skin, oily face, beauty-filter finish, yellow/orange cast, or mannequin-like rendering.
-- Clean cinematic exposure: the face remains readable, environmental color stays separate from core skin tone, and texture never becomes dirty or muddy.
-- Real commercial makeup instead of airbrushed beauty-filter makeup.
+## 默认操作流程
 
-## Repository Layout
+### 1. 默认先生成人物本身
 
-- `SKILL.md`: complete execution rules
-- `agents/openai.yaml`: Codex invocation metadata
-- `references/`: extended casting rules, material index, and face-realism patch
-- `assets/reference-library/`: bundled broad visual source materials
+普通人物需求默认生成一张单人物图，重点处理：
 
-## Use
+- 脸型、五官和真实骨相
+- 角色气质与心理状态
+- 发型、发质和妆容
+- 年龄、身份和社会角色
+- 服装、配饰和材质
+- 摄影质感、光线和背景
 
-Install or copy this directory into the Codex skills directory, then invoke it with `$character-casting-studio`.
+不会默认生成三视图、四视图、白底角色卡或信息栏。
+
+### 2. 头肩广告 / 影视肖像
+
+当用户要求“头肩照片”“广告肖像”“影视角色设计”“演员 casting 照片”时，使用：
+
+- 头部至上胸构图
+- 双肩可见
+- 85–105mm 人像镜头感
+- 眼睛精准对焦
+- 浅景深和自然背景虚化
+- 脸部清晰、曝光准确
+- 发型、耳饰、项链、衣领等身份信息完整可见
+
+### 3. 三视图按需触发
+
+只有用户明确提出以下要求时，才进入多视图流程：
+
+- 做三视图
+- 生成人物三视图
+- 白底角色图
+- 角色拆解
+- character turnaround
+- three-view character sheet
+
+此时必须以已经确定的人物为基准，不重新设计五官、脸型、发型、妆容、肤色和服装，只改变观察角度。默认使用干净白色背景，无文字、无信息栏、无额外装饰。
+
+## 推荐输入方式
+
+可以直接描述：
+
+```text
+生成 1 个 28 岁中国女性角色。
+气质：清冷、克制、有距离感。
+脸部：窄方脸、眼距略宽、鼻梁自然、嘴角轻微不对称。
+发型：短黑发，侧分，发丝有真实碎发。
+妆容：灰棕眼影、低饱和砖红唇，真实商业妆。
+服装：黑色建筑感西装，银色耳饰。
+用途：影视电影角色设计，头肩肖像。
+要求：真实摄影，不要油脸，不要蜡像感。
+```
+
+也可以提出一组需求：
+
+```text
+生成 10 个原创中国影视角色，年龄 25–45 岁，全部头肩肖像。
+每个人的脸型、眼型、鼻型、发型、妆容、服装和身份必须明显不同，不能像姐妹或三胞胎。
+```
+
+## 素材驱动规则
+
+广告、影视、时尚和超模级人物，建议提供至少三类素材：
+
+1. **脸部 / 人物素材**：脸型、眼眉结构、鼻唇比例、年龄感、皮肤纹理。
+2. **服装 / 身体 / 姿态素材**：服装结构、体态、配饰、职业身份和动作逻辑。
+3. **环境 / 材质 / 光线素材**：建筑、面料、道具、摄影光线、色彩和空间氛围。
+
+素材只能提供广义视觉基因，不能复制某一个真人的完整脸、服装、身份或标志性造型。
+
+## 面部真实感硬规则
+
+### 禁止蜡像感
+
+面部皮肤必须真实自然，禁止：
+
+- 蜡像感、塑料感、油腻感
+- 额头、鼻梁、苹果肌大片高光
+- 过度磨皮、瓷肌、美颜滤镜
+- 嘴唇像果冻、鼻头像塑料
+- 五官边缘过度干净，像 3D 假人
+- 面部颜色过于均匀
+- 黄橙色肤色和环境色污染
+
+必须保留：
+
+- 自然半哑光皮肤
+- 轻微毛孔、细小纹理和绒毛
+- 真实眼下结构和自然色差
+- 适度面部明暗起伏
+- 轻微不对称和少量真实微瑕疵
+
+## v1.1.1 清洁电影感规则
+
+> 人物可以粗粝，摄影必须干净；环境可以昏暗，脸必须清楚；皮肤可以不完美，但不能显脏；去掉网红感，不等于去掉高级完成度。
+
+执行时必须注意：
+
+- 电影感不等于低曝光，眼睛、鼻子、嘴、脸部骨相必须清楚。
+- 环境可以暗，但脸不能陷入黑色阴影。
+- 环境色可以改变背景和服装，不能把脸染成黄色、橙色、绿色或蓝色。
+- 真实纹理要干净，不能堆成脏感、噪点感或泥泞感。
+- 去掉网红脸和美颜感，但要保留干净镜头、精准妆发和商业摄影完成度。
+
+## 批量人物规则
+
+同一组人物必须明显区分：
+
+- 脸型不同
+- 眼型和眼距不同
+- 鼻型和嘴唇比例不同
+- 发长、发质和发型不同
+- 肤色和年龄感有变化
+- 身体轮廓、姿态和身份不同
+- 每个人至少有 1–2 个新的记忆点
+
+禁止生成统一的网红脸、姐妹脸、双胞胎脸或三胞胎脸。
+
+## 原型人物规则
+
+可以参考经典小说形象或历史人物原型，但必须进行原创转译：
+
+- 只借用精神气质、社会位置、人生矛盾和时代感觉
+- 不直接复制具体人物的脸、服装、发型和肖像
+- 增加新的面部记忆点、身份锚点和生活痕迹
+- 让角色像一个真实存在过或正在生活的人，而不是 cosplay
+
+示例：
+
+- 红楼梦式闺阁诗人
+- 三国谋士型人物
+- 水浒江湖守义者
+- 西游行脚地图师
+- 边塞女信使
+- 聊斋式异质医者
+- 宫廷档案司
+- 唐代江上诗人
+- 盐商遗孀
+- 流放归来的老将
+
+## 输出建议
+
+- 默认单人照片，不自动做三视图
+- 头肩肖像建议使用 `1024x1536`
+- 广告和影视用途优先使用清晰脸部、干净背景和可读服装领口
+- 不要添加无关文字、标签、参数表或信息栏
+- 生成文件建议保存到 `D:\Codex_Outputs\images`
+- 过程稿建议保存到 `D:\Codex_Outputs\drafts`
+
+## 示例图库
+
+以下图片展示了不同族裔、面部骨相、发型、服装和配饰方向。它们是原创视觉示例，不代表真实人物。
+
+### 中国女性：建筑感黑色西装
+
+![中国女性建筑感西装](./examples/character-gallery/maliang-20260819-032458-1-7ea3f6fa.png)
+
+### 尼日利亚女性：象牙色雕塑礼服
+
+![尼日利亚女性象牙色礼服](./examples/character-gallery/maliang-20260819-032455-1-98e784b3.png)
+
+### 印度女性：珠宝与宝石色时装
+
+![印度女性宝石色时装](./examples/character-gallery/maliang-20260819-032458-1-0b2a9558.png)
+
+### 日本男性：解构式炭黑西装
+
+![日本男性解构西装](./examples/character-gallery/maliang-20260819-032454-1-b4f1cb97.png)
+
+### 摩洛哥女性：黑色铜饰高级定制
+
+![摩洛哥女性铜饰造型](./examples/character-gallery/maliang-20260819-032458-1-78f62101.png)
+
+### 黑人英国男性：钴蓝皮革造型
+
+![黑人英国男性钴蓝皮革](./examples/character-gallery/maliang-20260819-032851-1-f0969682.png)
+
+### 安第斯女性：深红编织感大衣
+
+![安第斯女性深红大衣](./examples/character-gallery/maliang-20260819-032831-1-5e194982.png)
+
+### 希腊塞浦路斯男性：珍珠灰西装
+
+![希腊塞浦路斯男性珍珠灰西装](./examples/character-gallery/maliang-20260819-032832-1-d9168ce0.png)
+
+### 青年男模：蓝色无袖造型
+
+![青年男模蓝色无袖造型](./examples/character-gallery/d11cbfa6-39a7-4621-aafc-09a0501ef4b1.png)
+
+### 波兰女性：钴蓝缎面与黑色礼帽
+
+![波兰女性钴蓝缎面](./examples/character-gallery/maliang-20260819-032818-1-2a9c2a8b.png)
+
+## 一句话总原则
+
+**先把人设计清楚，再把照片拍干净；先建立身份记忆点，再追求商业完成度。**
