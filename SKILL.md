@@ -153,6 +153,55 @@ When fashion, couture, luxury, or advertising direction conflicts with skin real
 - Require visible microtexture at the facial close-up: pores, tiny vellus hairs, faint dry areas, lip texture, natural under-eye folds, and uneven tonal response.
 - State explicitly that the face must remain matte-to-satin and slightly imperfect even under couture lighting.
 
+### v1.1.1 CLEAN CINEMATIC PORTRAIT PATCH
+
+This patch is a hard override for cinematic, advertising, fashion, and head-and-shoulders portrait generation.
+
+#### Total Rule
+
+> 人物可以粗粝，摄影必须干净；环境可以昏暗，脸必须清楚；皮肤可以不完美，但不能显脏；去掉网红感，不等于去掉高级完成度。
+
+The operational meaning is:
+
+- cinematic mood does not mean low exposure;
+- environmental color must not contaminate the core skin tone;
+- real texture must not become dirt, noise, or muddy detail;
+- removing influencer gloss must not remove commercial photography polish.
+
+#### Exposure and Facial Readability
+
+- Keep the eyes, nose, mouth, cheek planes, and jawline clearly readable even in a dark or dramatic environment.
+- Use controlled cinematic contrast, not crushed facial shadows, blacked-out eye sockets, or underexposed skin.
+- Let the environment fall darker or softer while keeping the face correctly exposed and visually primary.
+- Prefer clean key/fill separation, readable catchlights, moderate shadow density, and a deliberate exposure balance.
+
+#### Environmental Color Separation
+
+- Separate environmental color from the core face and neck skin. Colored walls, neon, tungsten, foliage, and practical lights may tint the background and clothing, but must not turn skin yellow, orange, green, blue, bronze, or gray.
+- Keep neutral-to-natural skin white balance on the face. Use color contrast in the environment rather than color contamination on the skin.
+- Avoid heavy amber, green, cyan, magenta, or mixed-light spill across the forehead, cheeks, nose, lips, and under-eyes.
+
+#### Clean Texture and Commercial Finish
+
+- Preserve subtle pores, fine lines, vellus hairs, under-eye structure, lip texture, and restrained tonal variation.
+- Keep the texture clean, legible, and photographic. Do not stack pores, grain, blemishes, grime, harsh sharpening, or muddy noise into a dirty-looking face.
+- Remove beauty-filter gloss and influencer styling while retaining controlled makeup, precise grooming, clean lens rendering, coherent wardrobe materials, and high-end advertising finish.
+- The face may be lived-in, weathered, asymmetrical, or psychologically tense, but it must remain clean, believable, and professionally photographed.
+
+#### v1.1.1 Prompt Additions
+
+Add these positive constraints to cinematic or advertising portraits:
+
+```text
+clean cinematic exposure, face clearly readable, controlled contrast, readable facial planes, neutral skin white balance, environmental color separation, clean real-photography texture, subtle pores, fine detail without dirt, polished commercial photography, refined lens rendering, psychologically specific human presence
+```
+
+Add these negative constraints:
+
+```text
+no underexposed face, no crushed facial shadows, no blacked-out eye sockets, no muddy contrast, no dirty-looking skin, no grime texture, no excessive skin grain, no harsh sharpening, no green color spill on face, no amber color spill on face, no cyan color spill on face, no magenta color spill on face, no yellow/orange skin contamination, no gray dead skin, no low-detail cinematic darkness, no influencer gloss, no beauty-filter finish, no loss of commercial polish
+```
+
 ### Character Presence
 
 - Give the character a specific life history through gaze, facial tension, grooming, posture, clothing logic, and restrained imperfections.

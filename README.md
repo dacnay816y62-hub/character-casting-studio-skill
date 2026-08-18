@@ -15,6 +15,7 @@ Multi-view assets are opt-in. Use the multi-view workflow only when the user exp
 - Clear identity separation across batches; avoid sibling, twin, or triplet faces.
 - Natural semi-matte skin with subtle pores and restrained highlights.
 - No waxy skin, plastic skin, oily face, beauty-filter finish, yellow/orange cast, or mannequin-like rendering.
+- Clean cinematic exposure: the face remains readable, environmental color stays separate from core skin tone, and texture never becomes dirty or muddy.
 - Real commercial makeup instead of airbrushed beauty-filter makeup.
 
 ## Repository Layout
