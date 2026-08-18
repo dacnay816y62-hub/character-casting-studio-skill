@@ -1,0 +1,11 @@
+interface:
+  display_name: Character Casting Studio
+  short_description: Create material-driven photorealistic casting sheets
+  default_prompt: Use $character-casting-studio to generate the requested person first, focusing on face, temperament, makeup, hair, clothing, age, identity, and photographic quality. Generate a single character image by default; create a three-view, white-background, or character-breakdown asset only when the user explicitly asks for it.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
