@@ -16,3 +16,6 @@ generated/
 drafts/
 temp/
 *.log
+
+# Private reference images must remain local and untracked
+assets/reference-library/

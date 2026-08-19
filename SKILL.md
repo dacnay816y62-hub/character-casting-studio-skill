@@ -53,9 +53,7 @@ For film, commercial, advertising, fashion, or model-grade character work, use s
 
 For production-grade output, require a small source packet with a minimum of three complementary inputs. Never silently fall back to a text-only generic face:
 
-When the bundled reference library is available, read [references/material-reference-library.md](references/material-reference-library.md) and select only the relevant assets for the current character or batch.
-
-When the bundled reference library is available, read [references/material-reference-library.md](references/material-reference-library.md) and select only the relevant assets for the current character or batch.
+When a local or explicitly authorized reference library is available, read [references/material-reference-library.md](references/material-reference-library.md) and select only the relevant assets for the current character or batch. Do not commit private reference images, clipboard screenshots, personal photos, or source files containing identifying information to a public repository.
 
 1. **Face or person references:** two or three different faces, portraits, or broad human-feature references. Extract face geometry, eye and brow spacing, nose and lip proportions, age cues, asymmetry, skin texture, and hair tendencies. Do not copy any one person's identity.
 2. **Wardrobe / body / pose references:** garments, silhouettes, accessories, posture, occupation, or movement references that define the character's casting logic.
