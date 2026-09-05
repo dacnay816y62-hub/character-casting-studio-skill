@@ -4,7 +4,7 @@
 
 从脸部骨相、身份、妆发与服装建立原创写实人物，支持广告肖像、影视选角与按需多视图。
 
-**[快速开始](#start)** · **[下载与安装](#install)** · **[完整规则](SKILL.md)** · **[全部视觉 Skills](https://github.com/dacnay816y62-hub/cinema-dna-21x9x3/blob/main/docs/FANTASY-COLLECTION.md)**
+**[快速开始](#start)** · **[下载与安装](#install)** · **[完整规则](SKILL.md)** · **[全部视觉 Skills](https://github.com/dacnay816y62-hub?tab=repositories)**
 
 | 视觉示例 01 | 视觉示例 02 |
 | :---: | :---: |
@@ -256,4 +256,4 @@ Codex CLI / IDE 的用户级目录是 `~/.agents/skills/`，项目级目录是 `
 
 **让想象先被看见。** 将视觉判断与创作流程整理成可以继续使用的方法。
 
-**[浏览全部视觉 Skills](https://github.com/dacnay816y62-hub/cinema-dna-21x9x3/blob/main/docs/FANTASY-COLLECTION.md)** · [FANTASY CHARACTER VISUAL DNA](https://github.com/dacnay816y62-hub/fantasy-character-visual-dna-skill) · [Fantasy 生命感人像摄影](https://github.com/dacnay816y62-hub/fantasy-life-force-portrait-photography)
+**[浏览全部视觉 Skills](https://github.com/dacnay816y62-hub?tab=repositories)** · [FANTASY CHARACTER VISUAL DNA](https://github.com/dacnay816y62-hub/fantasy-character-visual-dna-skill) · [Fantasy 生命感人像摄影](https://github.com/dacnay816y62-hub/fantasy-life-force-portrait-photography)
