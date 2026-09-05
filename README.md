@@ -1,10 +1,45 @@
 # Character Casting Studio
 
-## 人物角色生成 Skill
+**FANTASY / 梵想美学 · 角色设计**
 
-用于生成原创、真实、可用于广告、影视、电影角色设计和时尚视觉开发的人物形象。
+从脸部骨相、身份、妆发与服装建立原创写实人物，支持广告肖像、影视选角与按需多视图。
 
-核心目标不是随机生成一张漂亮脸，而是建立一个**有脸、有气质、有身份、有记忆点、可继续开发的人物角色**。
+**[快速开始](#start)** · **[下载与安装](#install)** · **[完整规则](SKILL.md)** · **[全部视觉 Skills](https://github.com/dacnay816y62-hub/cinema-dna-21x9x3/blob/main/docs/FANTASY-COLLECTION.md)**
+
+| 视觉示例 01 | 视觉示例 02 |
+| :---: | :---: |
+| ![Character Casting Studio · 示例 1](examples/character-gallery/maliang-20260819-032458-1-7ea3f6fa.png) | ![Character Casting Studio · 示例 2](examples/character-gallery/maliang-20260819-032454-1-b4f1cb97.png) |
+
+<a id="start"></a>
+
+## 一分钟开始
+
+| 你提供 | 这套 Skill 组织的交付 |
+| --- | --- |
+| 人物简报、身份设定与已获授权的参考 | 单人肖像；明确要求时追加一致性多视图 |
+
+```text
+用 $character-casting-studio 设计一位 35 岁的城市档案管理员。短发、窄方脸、克制但警觉，灰色毛呢外套。先做一张头肩肖像，皮肤自然、脸部清楚，不要三视图。
+```
+
+**生成说明：** Skill 组织设计判断、提示词与执行流程；图片由当前环境中可用的图像工具生成或编辑。示例用于理解视觉方向，具体来源以本仓库记录为准，不能据此保证每次得到相同效果。
+
+<a id="install"></a>
+
+## 下载与安装
+
+**[下载当前分支 ZIP](https://github.com/dacnay816y62-hub/character-casting-studio-skill/archive/refs/heads/main.zip)** · **[阅读 Skill 规则](SKILL.md)**
+
+1. 下载并解压仓库。
+2. 将仓库根目录（包含 `SKILL.md`）放入当前助手支持的技能目录。
+3. 安装文件夹命名为 **`character-casting-studio`**，确保入口是 `character-casting-studio/SKILL.md`。
+4. 在支持技能调用的会话中使用 **`$character-casting-studio`**。如果列表未刷新，新开一个任务。
+
+Codex CLI / IDE 的用户级目录是 `~/.agents/skills/`，项目级目录是 `.agents/skills/`；Windows 用户目录可写为 `%USERPROFILE%\.agents\skills\`。以 [OpenAI 官方安装说明](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills) 为准。ChatGPT 与其他宿主请按各自的技能加载方式使用。
+
+仓库名与调用名可能不同，以上以 `SKILL.md` 中的名称为准。安装不包含图像服务、账户或生成额度；实际出图取决于你使用的环境。
+
+---
 
 ## 适用场景
 
@@ -216,3 +251,9 @@
 ## 一句话总原则
 
 **先把人设计清楚，再把照片拍干净；先建立身份记忆点，再追求商业完成度。**
+
+## FANTASY / 梵想美学
+
+**让想象先被看见。** 将视觉判断与创作流程整理成可以继续使用的方法。
+
+**[浏览全部视觉 Skills](https://github.com/dacnay816y62-hub/cinema-dna-21x9x3/blob/main/docs/FANTASY-COLLECTION.md)** · [FANTASY CHARACTER VISUAL DNA](https://github.com/dacnay816y62-hub/fantasy-character-visual-dna-skill) · [Fantasy 生命感人像摄影](https://github.com/dacnay816y62-hub/fantasy-life-force-portrait-photography)
