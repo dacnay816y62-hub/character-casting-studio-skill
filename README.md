@@ -1,5 +1,8 @@
 # Character Casting Studio
 
+> **即梦版已提供：** [下载即梦技能 ZIP](https://github.com/dacnay816y62-hub/character-casting-studio-skill/releases/download/jimeng-v1.0.0/character-casting-studio-skill-jimeng-v1.0.0.zip) · [查看即梦版说明](jimeng/README.md)。上传即梦请使用此专用 ZIP；原版技能继续保留。
+
+
 **FANTASY / 梵想美学 · 角色设计**
 
 从脸部骨相、身份、妆发与服装建立原创写实人物，支持广告肖像、影视选角与按需多视图。
